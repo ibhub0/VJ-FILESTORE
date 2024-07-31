@@ -27,11 +27,11 @@ CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
 
 # If Clone Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 CLONE_DB_URI = environ.get("CLONE_DB_URI", "")
-CDB_NAME = environ.get("CDB_NAME", "clonetechvj")
+CDB_NAME = environ.get("CDB_NAME", "")
 
 # Database Information
 DB_URI = environ.get("DB_URI", "")
-DB_NAME = environ.get("DB_NAME", "techvj")
+DB_NAME = environ.get("DB_NAME", "")
 
 # Auto Delete Information
 AUTO_DELETE_MODE = bool(environ.get('AUTO_DELETE_MODE', True)) # Set True or False
@@ -51,7 +51,7 @@ BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 # Verify Info :-
-VERIFY_MODE = bool(environ.get('VERIFY_MODE', False)) # Set True or False
+VERIFY_MODE = bool(environ.get('VERIFY_MODE', True)) # Set True or False
 
 # If Verify Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 SHORTLINK_API = environ.get("SHORTLINK_API", "") # shortlink api
@@ -75,6 +75,6 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
+URL = environ.get("URL", "")
 
     
